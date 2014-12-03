@@ -1,0 +1,27 @@
+{
+  "name": "virtualhumanapp",
+  "version": "0.0.1",
+  "homepage": "https://github.com/mmanika/virtualhumanapp",
+  "authors": [
+    "Manika Maheshwari <manika.maheshwari@gmail.com>"
+  ],
+  "description": "mobile app for patient interactive systems.",
+  "main": "index.html",
+  "keywords": [
+    "mobile",
+    "mhealth",
+    "healthcare"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.1"
+  }
+}

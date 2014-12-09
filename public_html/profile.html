@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User profile</title>
+
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style"  content="black-translucent" >
+        <meta name="format-detection" content="telephone=no">
+
+        <!-- 1. Load platform support before any code that touches the DOM. -->
+        <script>
+            if (!('import' in document.createElement('link'))) {
+                var Platform = {flags: {shadow: true}};
+            }
+        </script>
+        <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+        <!-- 2. Load the component using an HTML Import -->
+        <link rel="import" href="bower_components/core-icons/image-icons.html">
+        <link rel="import" href="bower_components/paper-elements/paper-elements.html">
+
+        <link rel="stylesheet" href="styles/profile.css">
+        <meta name="application-name" content="Virtual Human App">
+    </head>
+    <body>
+        <div id="profile">
+            <article class="user">
+                <dl class="user-data">
+                    <dt>Avatar:</dt>
+                    <dd class="user-avatar">
+                        <img src="http://www.gravatar.com/avatar/1f8104aa5e00f8947b48f768588596a3.png">
+                    </dd>
+
+                    <dt>Fullname:</dt>
+                    <dd class="user-name">Saptarshi Purkayastha</dd>
+
+                    <dt>Account:</dt>
+                    <a class="user-profile-email"><dd class="user-email">sunbiz@gmail.com</dd></a>
+
+                    <dt>Status message</dt> <br/>
+                    <a class="user-profile-status"><dd class="user-status">I'm available</dd></a>
+                </dl>
+                <paper-shadow>
+                    <paper-item>Age: 30 yrs</paper-item>
+                    <paper-item>Gender: Male</paper-item>
+                    <paper-item>Ethnicity: Bengali</paper-item>
+                </paper-shadow>
+            </article>
+        </div>
+    </body>
+</html>

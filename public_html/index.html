@@ -24,6 +24,7 @@
         <link rel="stylesheet" href="styles/loginform.css">
 
         <meta name="application-name" content="Virtual Human App">
+
     </head>
     <body>
         <!-- 3. Declare the element by its tag. -->
@@ -36,7 +37,9 @@
                 <paper-input-decorator floatingLabel label="Password">
                     <input id="password" is="core-input" name="j_password" type="password"/>
                 </paper-input-decorator> <br/>
-                <paper-button raised>Login</paper-button>
+                <paper-button id="loginButton" raised>
+                    <a href="profile.html">Login</a>
+                </paper-button>
             </form>
         </div>
     </body>

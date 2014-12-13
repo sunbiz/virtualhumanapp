@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Human body</title>
+
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style"  content="black-translucent" >
+        <meta name="format-detection" content="telephone=no">
+
+        <!-- 1. Load platform support before any code that touches the DOM. -->
+        <script>
+            if (!('import' in document.createElement('link'))) {
+                var Platform = {flags: {shadow: true}};
+            }
+        </script>
+        <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+        <!-- 2. Load the component using an HTML Import -->
+        <link rel="import" href="bower_components/paper-elements/paper-elements.html">
+        <link rel="import" href="bower_components/paper-item/paper-item.html">
+        <link rel="stylesheet" href="styles/humanbody.css">
+
+        <script src="scripts/fabric.min.js"></script>
+
+        <meta name="application-name" content="Virtual Human App">
+    </head>
+    <body>
+        <div id="humanbody">
+            <h1>Basic Health by Organs</h1>
+            <br/>
+            <canvas id="sunny" height="600" width="600"></canvas>
+            <!--object width="300px" id="male" data="images/male_anatomy.svg" type="image/svg+xml" ></object-->
+
+            <input type="button" value="brain" onclick="highlight()" />
+            <input type="button" value="heart" onclick="highlight()" />
+        </div>
+        <script>
+
+            var canvas = new fabric.Canvas('sunny');
+            fabric.loadSVGFromURL('images/male_anatomy.svg', function (ob, op) {
+                canvas.add(fabric.util.groupSVGElements(ob, op));
+                canvas.renderAll();
+            });
+
+
+            /*var canvas = document.getElementById('sunny');
+             canvas.width = 600;
+             canvas.height = 600;
+             var ctx = canvas.getContext('2d');
+             var img = new Image;
+             img.onload = function () {
+             ctx.drawImage(img, 0, 0);
+             };
+             img.src = 'images/male_anatomy.svg';
+             
+             
+             function highlight() {
+             document.getElementById('male').getSVGDocument().getElementById('brain').style.opacity = '1.0';
+             //.contentDocument.getElementById(brain).setAttribute("fill", "lime");
+             }*/
+        </script>
+    </body>
+</html>

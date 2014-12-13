@@ -10,17 +10,14 @@ and open the template in the editor.
 
 body{
     background:#567;
+    font-family: 'Open Sans',sans-serif;
+    color:#f0f0f0;
 }
 
 *{margin:0;padding:0;}
 
-form{
-    color:#f0f0f0;
+#health {
     text-align: center;
-}
-
-core-menu{
-    paper-item:center;
 }
 
 #health h1{

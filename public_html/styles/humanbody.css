@@ -10,24 +10,21 @@ and open the template in the editor.
 
 body{
     background:#567;
-}
-
-*{margin:0;padding:0;}
-
-form{
+    font-family: 'Open Sans',sans-serif;
     color:#f0f0f0;
-    text-align: center;
 }
 
-core-menu{
-    paper-item:center;
-}
+*{/* margin:0; *//* padding:0; */}
 
-#health h1{
+#humanbody h1{
     background:#3399cc;
-    padding:20px 0;
-    font-size:140%;
+    padding:10px 0;
+    font-size:100%;
     font-weight:300;
     text-align:center;
     color:#fff;
+}
+#btnClose {
+    padding: 16px;
+    float: right;
 }

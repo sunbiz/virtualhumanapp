@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Patient Health</title>
+        <title>Health Issues</title>
 
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
         <meta name="mobile-web-app-capable" content="yes">
@@ -20,21 +20,17 @@
         <!-- 2. Load the component using an HTML Import -->
         <link rel="import" href="bower_components/paper-elements/paper-elements.html">
         <link rel="import" href="bower_components/paper-item/paper-item.html">
-        <link rel="stylesheet" href="styles/patienthealth.css">
+        <link rel="stylesheet" href="styles/healthissues.css">
         <meta name="application-name" content="Virtual Human App">
     </head>
     <body>
         <div id="health">
             <h1>Major Health Issues</h1>
-            <form>
-                <div horizontal center-justified layout>
-                <core-menu>
-                    <paper-item>1. Headache</paper-item>
-                    <paper-item>2. Fever</paper-item>
-                    <paper-item>3. Cold and Chills</paper-item>
-                </core-menu>
-                </div>
-                </br><paper-button raised>More</paper-button>
-            </form>
+            <core-menu>
+                <paper-item>1. Headache</paper-item>
+                <paper-item>2. Fever</paper-item>
+                <paper-item>3. Cold and Chills</paper-item>
+            </core-menu>
+            </br><paper-button raised>More</paper-button>
         </div>
     </body>

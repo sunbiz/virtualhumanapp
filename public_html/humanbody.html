@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Human body</title>
+
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style"  content="black-translucent" >
+        <meta name="format-detection" content="telephone=no">
+
+        <!-- 1. Load platform support before any code that touches the DOM. -->
+        <script>
+            if (!('import' in document.createElement('link'))) {
+                var Platform = {flags: {shadow: true}};
+            }
+        </script>
+        <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+        <!-- 2. Load the component using an HTML Import -->
+        <link rel="import" href="bower_components/paper-elements/paper-elements.html">
+        <link rel="import" href="bower_components/paper-item/paper-item.html">
+        <link rel="stylesheet" href="styles/humanbody.css">
+        <link href="bower_components/paper-dialog/paper-dialog.html" rel="import">
+        <link href="bower_components/paper-dialog/paper-action-dialog.html" rel="import">
+
+        <meta name="application-name" content="Virtual Human App">
+    </head>
+    <body>
+        <div id="humanbody">
+            <h1>Basic Health by Organs</h1>
+            <br/>
+            <object height="450px" id="female" data="images/female_anatomy.svg" type="image/svg+xml" ></object>
+
+            <input type="button" id="btnLiver" value="liver" onclick="highlight(this.id)" />
+            <input type="button" id="btnHeart" value="heart" onclick="highlight(this.id)" />
+        </div>
+
+    <paper-action-dialog id="dialog" backdrop autoCloseDisabled layered="false">
+        <paper-fab id="btnClose" onclick="toggleDialog()" icon="clear"></paper-fab>
+        <h2>About <span class="organName"></span></h2>
+        <p>Here we are going to show the test results related to the <span class="organName"></span></p>
+    </paper-action-dialog>
+
+    <script>
+        function highlight(id) {
+            var femaleSvg = document.getElementById('female').getSVGDocument();
+            for (i = 0; i < femaleSvg.getElementsByTagName('image').length; i++) {
+                femaleSvg.getElementsByTagName('image')[i].setAttribute('opacity', '0.1');
+                femaleSvg.getElementsByTagName('image')[i].setAttribute('onclick', '');
+            }
+
+            femaleSvg.getElementById('arteries').setAttribute('opacity', '0.1');
+            femaleSvg.getElementById('backgroundbody').setAttribute('opacity', '1.0');
+            femaleSvg.getElementById('iliac').setAttribute('opacity', '0.1');
+            femaleSvg.getElementById('lefthandbone').setAttribute('opacity', '0.1');
+
+            if (id == 'btnLiver') {
+                femaleSvg.getElementById('liver').setAttribute('xlink:href', 'liver-red.png');
+                femaleSvg.getElementById('liver').setAttribute('opacity', '1.0');
+                femaleSvg.getElementById('liver').setAttribute('onclick', 'top.showDialog(this.id)');
+            }
+
+
+            if (id == 'btnHeart') {
+                femaleSvg.getElementById('heart').setAttribute('xlink:href', 'heart-red.png');
+                femaleSvg.getElementById('heart').setAttribute('opacity', '1.0');
+                femaleSvg.getElementById('heart').setAttribute('onclick', 'top.showDialog(this.id)');
+            }
+        }
+
+        function showDialog(id) {
+            for (i = 0; i < document.getElementsByClassName('organName').length; i++) {
+                document.getElementsByClassName('organName')[i].innerHTML = id;
+            }
+            toggleDialog();
+        }
+        function toggleDialog() {
+            document.getElementById('dialog').toggle();
+        }
+
+    </script>
+</body>
+</html>

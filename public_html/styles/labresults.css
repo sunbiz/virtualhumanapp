@@ -4,12 +4,12 @@ h1{
 }
 .centered{
     display: block;
-    text-align:center;
+    text-align: center;
 }
 paper-input{
-    float:center;
-    position:absolute
-    bottom: 20%
+    float: center;
+    position:absolute;
+    bottom: 20%;
     padding:5px;
 }
 .value{

@@ -20,10 +20,14 @@
         <!-- 2. Load the component using an HTML Import -->
         <link rel="import" href="bower_components/core-icons/core-icons.html">
         <link rel="import" href="bower_components/paper-elements/paper-elements.html">
+
         <link href="bower_components/core-collapse/core-collapse.html" rel="import">
+        <link href="bower_components/core-menu/core-menu.html" rel="import">
         <link href="bower_components/paper-icon-button/paper-icon-button.html" rel="import">
         <link href="bower_components/paper-item/paper-item.html" rel="import">
-        <link href="paper-dropdown.html" rel="import">
+        <link href="bower_components/paper-dropdown/paper-dropdown.html" rel="import">
+        <link href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html" rel="import">
+
         <link rel="stylesheet" href="styles/comparegroups.css">
         <meta name="application-name" content="Virtual Human App">
     </head>
@@ -31,8 +35,18 @@
         <div id="comparegroups">
             <h1>Compare with interest group</h1>
             <form>
-                <paper-input label="Sex"></paper-input>
-                </br><paper-input label="Age"></paper-input></br>            
+                <template is="auto-binding">
+                    <paper-dropdown-menu label="Sex">
+                        <paper-dropdown class="dropdown">
+                            <core-menu class="menu">
+                                <template repeat="{{sex}}">
+                                    <paper-item>{{}}</paper-item>
+                                </template>
+                            </core-menu>
+                        </paper-dropdown>
+                    </paper-dropdown-menu>
+                </template>
+                <br/><paper-input label="Age"></paper-input><br/><br/>      
                 <template is="auto-binding">
                     <label for="ethnicityInput"></label>
                     <paper-dropdown-menu label="Ethnicity">
@@ -44,8 +58,14 @@
                             </core-menu>
                         </paper-dropdown>
                     </paper-dropdown-menu>
-                    <script>
+                </template>
+                <br/><br/><paper-button raised>Compare</paper-button>
+            </form>
+        </div>
+
+        <script>
             scope = document.querySelector('template[is=auto-binding]');
+
             scope.ethnicity = [
                 'Hispanic or Latino',
                 'American Indian or Alaska Native',
@@ -56,11 +76,12 @@
                 'Not Hispanic or Latino',
                 'Unknown',
             ];
-                    </script>
-                </template>
-                </br></br><paper-button raised>Compare</paper-button>
-            </form>
-        </div>
+
+            scope.sex = [
+                'Male',
+                'Female',
+            ];
+        </script>
     </body>
 </html>
 

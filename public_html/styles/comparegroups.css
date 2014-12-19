@@ -1,9 +1,12 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+*{margin:0;padding:0;}
 
 body{
     background:#567;
     font-family:'Open Sans',sans-serif;
-    padding: 100px;
 }
+
 #comparegroups{
     width:300px;
     position: absolute;
@@ -13,23 +16,29 @@ body{
     right: 0;
     margin: auto;
 }
+#comparegroups h1{
+    background:#3399cc;
+    padding:20px 0;
+    font-size:100%;
+    font-weight:300;
+    text-align:center;
+    color:#fff;
+}
 
 form{
     background:#f0f0f0;
     padding:6% 4%;
     text-align: center;
 }
-h1{
-    background:#3399cc;
-    padding:20px 0;
-    font-size:140%;
-    font-weight:300;
-    text-align:center;
-    color:#fff;
-    margin-bottom:0;
+
+#footer{
+    position: absolute;
+    bottom: 1px;
+    left: 48%;
+    margin: auto;
 }
 
-html /deep / paper-dropdown-menu {
+html /deep/ paper-dropdown-menu {
     box-sizing: border-box;
     width: 187px;
 }
@@ -39,3 +48,13 @@ html /deep/ core-menu {
     width: 187px;
 }
 
+paper-input-decorator /deep/ ::-webkit-input-placeholder {
+    /* platform specific rules for placeholder text */
+    color: green;
+}
+paper-input-decorator /deep/ ::-moz-placeholder {
+    color: green;
+}
+paper-input-decorator /deep/ :-ms-input-placeholder {
+    color: green;
+}

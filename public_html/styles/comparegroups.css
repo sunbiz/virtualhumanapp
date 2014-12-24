@@ -40,21 +40,9 @@ form{
 
 html /deep/ paper-dropdown-menu {
     box-sizing: border-box;
-    width: 187px;
+    width: 100%;
 }
 
-html /deep/ core-menu {
-    box-sizing: border-box;
-    width: 187px;
-}
-
-paper-input-decorator /deep/ ::-webkit-input-placeholder {
-    /* platform specific rules for placeholder text */
-    color: green;
-}
-paper-input-decorator /deep/ ::-moz-placeholder {
-    color: green;
-}
-paper-input-decorator /deep/ :-ms-input-placeholder {
-    color: green;
+html /deep/ #label {
+    text-align: left;
 }

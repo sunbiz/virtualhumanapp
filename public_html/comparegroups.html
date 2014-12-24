@@ -35,48 +35,42 @@
         <div id="comparegroups">
             <h1>Compare with interest group</h1>
             <form>
-                <template is="auto-binding">
-                    <paper-dropdown-menu label="Sex">
-                        <paper-dropdown class="dropdown">
-                            <core-menu class="menu">
-                                <template repeat="{{sex}}">
-                                    <paper-item>{{}}</paper-item>
-                                </template>
-                            </core-menu>
-                        </paper-dropdown>
-                    </paper-dropdown-menu>
-                </template>
-                <br/><paper-input label="Age"></paper-input><br/><br/>      
-                <template is="auto-binding">
-                    <label for="ethnicityInput"></label>
-                    <paper-dropdown-menu label="Ethnicity">
-                        <paper-dropdown class="dropdown">
-                            <core-menu class="menu">
-                                <template repeat="{{ethnicity}}">
-                                    <paper-item>{{}}</paper-item>
-                                </template>
-                            </core-menu>
-                        </paper-dropdown>
-                    </paper-dropdown-menu>
-                </template>
+                <p>
+                <paper-dropdown-menu label="Sex">
+                    <paper-dropdown class="dropdown">
+                        <core-menu class="menu">
+                            <paper-item>Male</paper-item>
+                            <paper-item>Female</paper-item>
+                        </core-menu>
+                    </paper-dropdown>
+                </paper-dropdown-menu>
+                </p>
+                <p>
+                <paper-input-decorator floatinglabel style="text-align: left" label="Age">
+                    <input id="age" is="core-input" name="age"/>
+                </paper-input-decorator>
+                <br style="line-height: 150%;" />
+                <paper-dropdown-menu label="Ethnicity">
+                    <paper-dropdown class="dropdown">
+                        <core-menu class="menu">
+                            <paper-item style="text-align: start;">Hispanic or Latino</paper-item>
+                            <paper-item style="text-align: start;">American Indian or Alaska Native</paper-item>
+                            <paper-item style="text-align: start;">Asian</paper-item>
+                            <paper-item style="text-align: start;">Black or African American</paper-item>
+                            <paper-item style="text-align: start;">Native Hawaiian or Other Pacific Islander</paper-item>
+                            <paper-item style="text-align: start;">White</paper-item>
+                            <paper-item style="text-align: start;">Not Hispanic or Latino</paper-item>
+                            <paper-item style="text-align: start;">Unknown</paper-item>
+                        </core-menu>
+                    </paper-dropdown>
+                </paper-dropdown-menu>
+                </p>
                 <br/><br/><paper-button raised>Compare</paper-button>
             </form>
         </div>
 
         <script>
             scope = document.querySelector('template[is=auto-binding]');
-
-            scope.ethnicity = [
-                'Hispanic or Latino',
-                'American Indian or Alaska Native',
-                'Asian',
-                'Black or African American',
-                'Native Hawaiian or Other Pacific Islander',
-                'White',
-                'Not Hispanic or Latino',
-                'Unknown',
-            ];
-
             scope.sex = [
                 'Male',
                 'Female',

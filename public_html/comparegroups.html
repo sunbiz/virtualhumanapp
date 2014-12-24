@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Compare Groups</title>
+
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style"  content="black-translucent" >
+        <meta name="format-detection" content="telephone=no">
+
+        <!-- 1. Load platform support before any code that touches the DOM. -->
+        <script>
+            if (!('import' in document.createElement('link'))) {
+                var Platform = {flags: {shadow: true}};
+            }
+        </script>
+        <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+        <!-- 2. Load the component using an HTML Import -->
+        <link rel="import" href="bower_components/core-icons/core-icons.html">
+        <link rel="import" href="bower_components/paper-elements/paper-elements.html">
+
+        <link href="bower_components/core-collapse/core-collapse.html" rel="import">
+        <link href="bower_components/core-menu/core-menu.html" rel="import">
+        <link href="bower_components/paper-icon-button/paper-icon-button.html" rel="import">
+        <link href="bower_components/paper-item/paper-item.html" rel="import">
+        <link href="bower_components/paper-dropdown/paper-dropdown.html" rel="import">
+        <link href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html" rel="import">
+
+        <link rel="stylesheet" href="styles/comparegroups.css">
+        <meta name="application-name" content="Virtual Human App">
+    </head>
+    <body>
+        <div id="comparegroups">
+            <h1>Compare with interest group</h1>
+            <form>
+                <p>
+                <paper-dropdown-menu label="Sex">
+                    <paper-dropdown class="dropdown">
+                        <core-menu class="menu">
+                            <paper-item>Male</paper-item>
+                            <paper-item>Female</paper-item>
+                        </core-menu>
+                    </paper-dropdown>
+                </paper-dropdown-menu>
+                </p>
+                <p>
+                <paper-input-decorator floatinglabel style="text-align: left" label="Age">
+                    <input id="age" is="core-input" name="age"/>
+                </paper-input-decorator>
+                <br style="line-height: 150%;" />
+                <paper-dropdown-menu label="Ethnicity">
+                    <paper-dropdown class="dropdown">
+                        <core-menu class="menu">
+                            <paper-item style="text-align: start;">Hispanic or Latino</paper-item>
+                            <paper-item style="text-align: start;">American Indian or Alaska Native</paper-item>
+                            <paper-item style="text-align: start;">Asian</paper-item>
+                            <paper-item style="text-align: start;">Black or African American</paper-item>
+                            <paper-item style="text-align: start;">Native Hawaiian or Other Pacific Islander</paper-item>
+                            <paper-item style="text-align: start;">White</paper-item>
+                            <paper-item style="text-align: start;">Not Hispanic or Latino</paper-item>
+                            <paper-item style="text-align: start;">Unknown</paper-item>
+                        </core-menu>
+                    </paper-dropdown>
+                </paper-dropdown-menu>
+                </p>
+                <br/><br/><paper-button raised>Compare</paper-button>
+            </form>
+        </div>
+
+        <script>
+            scope = document.querySelector('template[is=auto-binding]');
+            scope.sex = [
+                'Male',
+                'Female',
+            ];
+        </script>
+    </body>
+</html>
+
+
+

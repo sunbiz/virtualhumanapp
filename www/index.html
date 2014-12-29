@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Virtual Human App - Login page</title>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style"  content="black-translucent" >
+        <meta name="format-detection" content="telephone=no">
+
+        <!-- 1. Load platform support before any code that touches the DOM. -->
+        <script>
+            if (!('import' in document.createElement('link'))) {
+                var Platform = {flags: {shadow: true}};
+            }
+        </script>
+        <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+
+        <link rel="import" href="bower_components/core-icons/image-icons.html">
+        <link rel="import" href="bower_components/paper-elements/paper-elements.html">
+
+        <link rel="stylesheet" href="styles/loginform.css">
+
+        <meta name="application-name" content="Virtual Human App">
+
+    </head>
+    <body>
+        <div id="outer">
+            <div id="mainpage">
+                <div id="loginform">
+                    <div id="header">
+                        <core-icon icon="image:healing"></core-icon>&nbsp; Virtual Human App
+                    </div>
+                    <paper-input-decorator floatingLabel label="Username">
+                        <input id="username" is="core-input" name="j_username"/>
+                    </paper-input-decorator> <br/>
+                    <paper-input-decorator floatingLabel label="Password">
+                        <input id="password" is="core-input" name="j_password" type="password"/>
+                    </paper-input-decorator> <br/>
+                    <paper-button id="loginButton" raised>
+                        <a href="homepage.html">Log in</a>
+                    </paper-button>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+
+        </div>
+    </body>
+</html>

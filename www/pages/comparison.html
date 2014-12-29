@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Lab Results</title>
+        <title>Virtual Human App - Lab Results</title>
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
@@ -9,23 +9,13 @@
         <meta name="apple-mobile-web-app-status-bar-style"  content="black-translucent" >
         <meta name="format-detection" content="telephone=no">
 
-        <!-- 1. Load platform support before any code that touches the DOM. -->
-        <script>
-            if (!('import' in document.createElement('link'))) {
-                var Platform = {flags: {shadow: true}};
-            }
-        </script>
-        <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-        <!-- 2. Load the component using an HTML Import -->
-        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-        <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-        <script type="text/javascript" src="/path/to/jquery-latest.js"></script> 
-        <script type="text/javascript" src="/path/to/jquery.tablesorter.js"></script> 
-        <link rel="import" href="bower_components/paper-elements/paper-elements.html">
-        <link rel="import" href="bower_components/paper-item/paper-item.html">
-        <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-        <link href="bower_components/paper-dialog/paper-dialog.html" rel="import">
-        <link href="bower_components/paper-dialog/paper-action-dialog.html" rel="import">
+        <script src="../scripts/jquery-1.11.2.min.js"></script>
+        <script src="../scripts/jquery.mobile-1.4.5.min.js"></script>
+
+        <link rel="stylesheet" href="../styles/jquery.mobile-1.4.5.min.css">
+
+        <script type="text/javascript" src="../scripts/jquery.tablesorter.min.js"></script> 
+
         <meta name="application-name" content="Virtual Human App">
     </head>
     <body>       
@@ -37,25 +27,25 @@
 
                     <thead>
                     <h1>Summary</h1>
+                    <tr>
+                        <th data-priority="1">You</th>
+                        <th data-priority="2">Your Group</th>
+                    </tr>
+                    </thead>
+                    <tbody>
                         <tr>
-                            <th data-priority="1">You</th>
-                            <th data-priority="2">Your Group</th>
+                            <td>1</td>
+                            <td>2</td>
                         </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>6</td>
-                            </tr>
-                            </tbody>
+                        <tr>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
             <div role="main" class="ui-content">
@@ -63,25 +53,25 @@
 
                     <thead>
                     <h1>Organ Function</h1>
+                    <tr>
+                        <th data-priority="1">You</th>
+                        <th data-priority="2">Your Group</th>
+                    </tr>
+                    </thead>
+                    <tbody>
                         <tr>
-                            <th data-priority="1">You</th>
-                            <th data-priority="2">Your Group</th>
+                            <td>1</td>
+                            <td>2</td>
                         </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>6</td>
-                            </tr>
-                            </tbody>
+                        <tr>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
             <div role="main" class="ui-content">
@@ -107,8 +97,9 @@
                                 <td>5</td>
                                 <td>6</td>
                             </tr>
-                            </tbody>
+                        </tbody>
                 </table>
             </div>
-            
-                            
+        </div>
+    </body>
+</html>

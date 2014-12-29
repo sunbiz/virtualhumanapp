@@ -67,7 +67,7 @@ body{
 }
 
 #header {
-    background:#3399cc;
+    background:#8b9dc3;
     font-size: 110%;
     vertical-align: middle;
     height: 75px;
@@ -98,4 +98,9 @@ body{
 paper-input-decorator {
     padding: 10px 10px 0 10px;
     text-align: left;
+}
+
+#logo {
+    width: 48px;
+    height: 48px;
 }

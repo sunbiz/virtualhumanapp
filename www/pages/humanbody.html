@@ -16,13 +16,13 @@
                 var Platform = {flags: {shadow: true}};
             }
         </script>
-        <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+        <script src="../bower_components/webcomponentsjs/webcomponents.min.js"></script>
         <!-- 2. Load the component using an HTML Import -->
-        <link rel="import" href="bower_components/paper-elements/paper-elements.html">
-        <link rel="import" href="bower_components/paper-item/paper-item.html">
-        <link rel="stylesheet" href="styles/humanbody.css">
-        <link href="bower_components/paper-dialog/paper-dialog.html" rel="import">
-        <link href="bower_components/paper-dialog/paper-action-dialog.html" rel="import">
+        <link href="../bower_components/paper-elements/paper-elements.html" rel="import">
+        <link href="../bower_components/paper-dialog/paper-dialog.html" rel="import">
+        <link href="../bower_components/paper-dialog/paper-action-dialog.html" rel="import">
+
+        <link rel="stylesheet" href="../styles/humanbody.css">
 
         <meta name="application-name" content="Virtual Human App">
     </head>
@@ -30,7 +30,7 @@
         <div id="humanbody">
             <h1>Basic Health by Organs</h1>
             <br/>
-            <object height="450px" id="female" data="images/female_anatomy.svg" type="image/svg+xml" ></object>
+            <object height="450px" id="female" data="../images/female_anatomy.svg" type="image/svg+xml" ></object>
 
             <input type="button" id="btnLiver" value="liver" onclick="highlight(this.id)" />
             <input type="button" id="btnHeart" value="heart" onclick="highlight(this.id)" />
@@ -78,7 +78,6 @@
         function toggleDialog() {
             document.getElementById('dialog').toggle();
         }
-
     </script>
 </body>
 </html>

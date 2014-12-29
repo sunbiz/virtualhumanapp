@@ -1,18 +1,19 @@
 {
   "name": "virtualhumanapp",
   "version": "0.0.1",
-  "homepage": "https://github.com/mmanika/virtualhumanapp",
+  "homepage": "https://github.com/iupui-soic/virtualhumanapp",
   "authors": [
-    "Manika Maheshwari <manika.maheshwari@gmail.com>"
+    "Manika Maheshwari <manika.maheshwari@gmail.com>",
+    "Saptarshi Purkayastha <saptpurk@iupui.edu>"
   ],
-  "description": "mobile app for patient interactive systems.",
+  "description": "Mobile app for patient interactive systems",
   "main": "index.html",
   "keywords": [
     "mobile",
     "mhealth",
     "healthcare"
   ],
-  "license": "MIT",
+  "license": "APL",
   "private": true,
   "ignore": [
     "**/.*",

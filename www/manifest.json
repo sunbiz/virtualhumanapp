@@ -1,5 +1,5 @@
 {
-    "name": "virtualhumanapp",
+    "name": "Virtual Human App",
     "description": "Mobile app for patient interactive systems",
     "manifest_version": 2,
     "minimum_chrome_version": "23",

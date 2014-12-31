@@ -60,7 +60,7 @@ body{
 
 #loginform {
     margin: 0 auto;
-    height: 350px;
+    padding-bottom: 20px;
     width: 300px;
     background:#f0f0f0;
     text-align: center;

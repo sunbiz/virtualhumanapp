@@ -17,7 +17,8 @@
         </script>
         <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
 
-        <link rel="import" href="bower_components/paper-elements/paper-elements.html">
+        <link rel="import" href="bower_components/paper-ripple/paper-ripple.html">
+        <link rel="import" href="bower_components/paper-input/paper-input-decorator.html">
         <link rel="stylesheet" href="styles/loginform.css">
 
         <meta name="application-name" content="Virtual Human App">
@@ -35,10 +36,11 @@
                     </paper-input-decorator> <br/>
                     <paper-input-decorator floatingLabel label="Password">
                         <input id="password" is="core-input" name="j_password" type="password"/>
-                    </paper-input-decorator> <br/>
-                    <paper-button id="loginButton" raised>
-                        <a href="pages/homepage.html">Log in</a>
-                    </paper-button>
+                    </paper-input-decorator> <br/><br/>
+                    <div class="button raised green">
+                        <div class="center" fit>OK</div>
+                        <paper-ripple fit></paper-ripple>
+                    </div>
                 </div>
             </div>
         </div>

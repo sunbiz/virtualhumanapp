@@ -23,6 +23,7 @@
         <link href="../bower_components/core-icon-button/core-icon-button.html" rel="import" />
         <link href="../bower_components/core-toolbar/core-toolbar.html" rel="import" />
         <link href="../bower_components/core-animated-pages/core-animated-pages.html" rel="import" />
+        <link rel="import" href="../bower_components/paper-elements/paper-elements.html">
 
         <link rel="stylesheet" href="../styles/homepage.css">
 
@@ -38,51 +39,72 @@
 
             <section vertical layout>
 
-                <div id="container" flex horizontal wrap around-justified layout hero-p>
-                    <template repeat="{{item in items}}">
-                        <div class="card" vertical center center-justified layout hero-id="item-{{item}}" hero?="{{$.pages.selected === item + 1 || lastSelected === item + 1}}" on-tap="{{selectView}}"><span cross-fade>{{item}}</span></div>
-                    </template>
+                <div id="container" on-tap="{{tapAction}}" flex horizontal wrap around-justified layout hero-p>
+                    <paper-shadow z="0" animated>
+                        <div class="card" vertical center center-justified layout><span cross-fade><core-icon class="buttonicon" icon="face-unlock"></core-icon><br/>Profile</span></div></paper-shadow>
+                    <paper-shadow z="0" animated><div class="card" vertical center center-justified layout><span cross-fade><core-icon class="buttonicon" icon="report-problem"></core-icon><br/>Health Issues</span></div></paper-shadow>
+                    <paper-shadow z="0" animated><div class="card" vertical center center-justified layout><span cross-fade><core-icon class="buttonicon" icon="accessibility"></core-icon><br/>Human Body</span></div></paper-shadow>
+                    <paper-shadow z="0" animated><div class="card" vertical center center-justified layout><span cross-fade><core-icon class="buttonicon" icon="assignment"></core-icon><br/>Test Results</span></div></paper-shadow>
+                    <paper-shadow z="0" animated><div class="card" vertical center center-justified layout><span cross-fade><core-icon class="buttonicon" icon="account-child"></core-icon><br/>Create Groups</span></div></paper-shadow>
+                    <paper-shadow z="0" animated><div class="card" vertical center center-justified layout><span cross-fade><core-icon class="buttonicon" icon="cached"></core-icon><br/>Compare with Groups</span></div></paper-shadow>
+                    <paper-shadow z="0" animated><div class="card" vertical center center-justified layout><span cross-fade><core-icon class="buttonicon" icon="assessment"></core-icon><br/>Charts</span></div></paper-shadow>
                 </div>
-
             </section>
-
-            <template repeat="{{item in items}}">
-                <section vertical layout>
-                    <div class="view" flex vertical center center-justified layout hero-id="item-{{item}}" hero?="{{$.pages.selected === item + 1 || $.pages.selected === 0}}"><span cross-fade>{{item}}</span></div>
-                </section>
-            </template>
 
         </core-animated-pages>
     </template>
 
     <script>
-            addEventListener('template-bound', function (e) {
-                var scope = e.target;
-                var items = [], count = 50;
-                for (var i = 0; i < count; i++) {
-                    items.push(i);
-                }
 
-                scope.items = items;
+//            addEventListener('template-bound', function (e) {
+//                var scope = e.target;
+//                var items = [], count = 50;
+//                for (var i = 0; i < count; i++) {
+//                    items.push(i);
+//                }
+//
+//                scope.items = items;
+//
+//                scope.selectView = function (e) {
+//                    var i = e.target.templateInstance.model.item;
+//                    this.$.pages.selected = i + 1;
+//                }
+//
+//                scope.back = function () {
+//                    this.lastSelected = this.$.pages.selected;
+//                    console.log(this.lastSelected);
+//                    this.$.pages.selected = 0;
+//                }
+//
+//                scope.transitionend = function () {
+//                    if (this.lastSelected) {
+//                        this.lastSelected = null;
+//                    }
+//                }
+//            })
 
-                scope.selectView = function (e) {
-                    var i = e.target.templateInstance.model.item;
-                    this.$.pages.selected = i + 1;
-                }
-
-                scope.back = function () {
-                    this.lastSelected = this.$.pages.selected;
-                    console.log(this.lastSelected);
-                    this.$.pages.selected = 0;
-                }
-
-                scope.transitionend = function () {
-                    if (this.lastSelected) {
-                        this.lastSelected = null;
-                    }
-                }
-            })
     </script>
+    <script>
+        var scope = document.querySelector('template[is=auto-binding]');
+        console.log(scope);
+
+        scope.tapAction = function (e) {
+            var target = e.target;
+            if (!target.down) {
+                target.setZ(target.z + 1);
+                if (target.z === 1) {
+                    target.down = true;
+                }
+            } else {
+                target.setZ(target.z - 1);
+                if (target.z === 0) {
+                    target.down = false;
+                }
+            }
+        };
+    </script>
+
+
 
 </body>
 </html>

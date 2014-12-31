@@ -23,6 +23,8 @@
         <link rel="import" href="../bower_components/core-header-panel/core-header-panel.html">
         <link rel="import" href="../bower_components/core-toolbar/core-toolbar.html">
         <link rel="import" href="../bower_components/paper-elements/paper-elements.html">
+        <script src="../scripts/jquery-1.11.2.min.js" type="text/javascript"></script>
+        <script src="../scripts/jquery.transit.min.js" type="text/javascript"></script>
 
         <link rel="stylesheet" href="../styles/homepage.css">
 
@@ -35,15 +37,16 @@
             <span flex>Welcome, Steve Jobs</span>
         </core-toolbar>
         <div id="tiles-container" class="tiles-container" layout wrap horizontal around-justified center relative>
-            <div class="card raised" vertical center center-justified layout><core-icon icon="report-problem"></core-icon>Health Issues<paper-ripple fit></paper-ripple></div>
-            <div class="card raised" vertical center center-justified layout><core-icon icon="accessibility"></core-icon>Human Body<paper-ripple fit></paper-ripple></div>
-            <div class="card raised" vertical center center-justified layout><core-icon icon="assignment"></core-icon>Test Results<paper-ripple fit></paper-ripple></div>
-            <div class="card raised" vertical center center-justified layout><core-icon icon="account-child"></core-icon>Create Groups<paper-ripple fit></paper-ripple></div>
-            <div class="card raised" vertical center center-justified layout><core-icon icon="cached"></core-icon>Compare with Groups<paper-ripple fit></paper-ripple></div>
-            <div class="card raised" vertical center center-justified layout><core-icon icon="assessment"></core-icon>Charts<paper-ripple fit></paper-ripple></div>
-            <div class="card raised" vertical center center-justified layout><core-icon icon="face-unlock"></core-icon>Profile<paper-ripple fit></paper-ripple></div>
-            <div class="card raised" vertical center center-justified layout><core-icon icon="settings"></core-icon>Settings<paper-ripple fit></paper-ripple></span></div>
+            <div id="healthissues" class="card raised" vertical center center-justified layout onclick="gotoPage(this)"><core-icon icon="report-problem"></core-icon>Health Issues<paper-ripple fit></paper-ripple></div>
+            <div id="humanbody" class="card raised" vertical center center-justified layout onclick="gotoPage(this)"><core-icon icon="accessibility"></core-icon>Human Body<paper-ripple fit></paper-ripple></div>
+            <div id="labresults" class="card raised" vertical center center-justified layout onclick="gotoPage(this)"><core-icon icon="assignment"></core-icon>Test Results<paper-ripple fit></paper-ripple></div>
+            <div id="creategroups" class="card raised" vertical center center-justified layout onclick="gotoPage(this)"><core-icon icon="account-child"></core-icon>Create Groups<paper-ripple fit></paper-ripple></div>
+            <div id="comparison" class="card raised" vertical center center-justified layout onclick="gotoPage(this)"><core-icon icon="cached"></core-icon>Compare with Groups<paper-ripple fit></paper-ripple></div>
+            <div id="charts" class="card raised" vertical center center-justified layout onclick="gotoPage(this)"><core-icon icon="assessment"></core-icon>Charts<paper-ripple fit></paper-ripple></div>
+            <div id="profile" class="card raised" vertical center center-justified layout onclick="gotoPage(this)"><core-icon icon="face-unlock"></core-icon>Profile<paper-ripple fit></paper-ripple></div>
+            <div id="settings" class="card raised" vertical center center-justified layout onclick="gotoPage(this)"><core-icon icon="settings"></core-icon>Settings<paper-ripple fit></paper-ripple></span></div>
         </div>
     </core-header-panel>
+    <script src="../scripts/homepage.js" type="text/javascript"></script>
 </body>
 </html>

@@ -1,8 +1,3 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
     Created on : Dec 9, 2014, 4:10:50 PM
     Author     : Manika
@@ -14,16 +9,10 @@ body{
     color:#f0f0f0;
 }
 
-*{/* margin:0; *//* padding:0; */}
-
-#humanbody h1{
-    background:#3399cc;
-    padding:10px 0;
-    font-size:100%;
-    font-weight:300;
-    text-align:center;
-    color:#fff;
+.toolbar {
+    background-color: #8b9dc3;
 }
+
 #btnClose {
     padding: 16px;
     float: right;

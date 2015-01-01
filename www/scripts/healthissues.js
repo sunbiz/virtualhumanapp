@@ -15,7 +15,7 @@ var healthissues = {
 $(document).ready(function () {
     for (symptom in healthissues) {
         var date = randomDate(new Date(2012, 0, 1), new Date());
-        $('#issues').append('<core-item class="raised"><div class="listItems" flex><div style="float:left">' + symptom + '</div><div style="float:right"> (' + date.toLocaleDateString() + ')</div></div><a href="humanbody.html?' + healthissues[symptom] + '"></a></paper-item>');
+        $('#issues').append('<core-item class="raised"><div class="listItems" flex><div style="float:left">' + symptom + '</div><div style="float:right"> (since: ' + date.toLocaleDateString() + ')</div></div><a href="humanbody.html?' + healthissues[symptom] + '"></a></paper-item>');
     }
     $('core-item').css('display', 'none');
     $('core-item:lt(3)').css('display', 'flex');

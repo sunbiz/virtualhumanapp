@@ -18,19 +18,30 @@
         </script>
         <script src="../bower_components/webcomponentsjs/webcomponents.min.js"></script>
         <!-- 2. Load the component using an HTML Import -->
+        <link rel="import" href="../bower_components/core-header-panel/core-header-panel.html">
+        <link rel="import" href="../bower_components/core-toolbar/core-toolbar.html">
+        <link rel="import" href="../bower_components/core-item/core-item.html">
         <link rel="import" href="../bower_components/paper-elements/paper-elements.html">
         <link rel="import" href="../bower_components/paper-item/paper-item.html">
+        <script src="../scripts/jquery-1.11.2.min.js" type="text/javascript"></script>
+
         <link rel="stylesheet" href="../styles/healthissues.css">
         <meta name="application-name" content="Virtual Human App">
     </head>
-    <body>
+    <body fullbleed layout vertical>
+    <core-header-panel flex>
+        <core-toolbar class="toolbar">
+            <span flex>Major Health Issues</span>
+        </core-toolbar>
         <div id="health">
-            <h1>Major Health Issues</h1>
-            <core-menu>
-                <paper-item>1. Headache</paper-item>
-                <paper-item>2. Fever</paper-item>
-                <paper-item>3. Cold and Chills</paper-item>
-            </core-menu>
-            </br><paper-button raised><a href="humanbody.html">More</a></paper-button>
+            <div id="issues"></div>
+            <br/>
+            <div class="button raised green" onclick="showMore()">
+                <div class="center" fit>More</div>
+                <paper-ripple fit></paper-ripple>
+            </div>
         </div>
-    </body>
+    </core-header-panel>
+    <script src="../scripts/healthissues.js"></script>
+</body>
+</html>

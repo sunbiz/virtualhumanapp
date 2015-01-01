@@ -7,7 +7,6 @@
 	 viewBox="0 0 800 2350" enable-background="new 0 0 800 2350" xml:space="preserve">
 <image overflow="visible"  id="backgroundbody" width="641" height="2315" xlink:href="7006D53.png"  transform="matrix(1 0 0 1 91.927 14.6943)">
 </image>
-<path fill="none" enable-background="new    " d="z"/>
 <g id="g5538" transform="matrix(0.5046873,0,0,0.59845794,1136.0115,728.0821)" opacity="0.7">
 	<g id="lefthandbone" transform="translate(-477.10334,1148.3813)" inkscape:label="Skeleton">
 		<g id="g3596" transform="matrix(-3.8338212,-0.61275215,-0.64078662,3.6660913,1.7984821,-2046.5649)" inkscape:label="Humerus">
@@ -2257,7 +2256,6 @@
 </image>
 <image overflow="visible"  width="155" height="618" xlink:href="7006D50.png"  transform="matrix(1 0 0 1 92.7423 506.459)">
 </image>
-<path fill="none" enable-background="new    " d="z"/>
 <image overflow="visible"  opacity="0.35" enable-background="new    " width="200" height="176" id="brain" xlink:href="7006D5E.gif"  transform="matrix(0.9786 0 0 0.9786 317.0539 37.5908)">
 </image>
 <image overflow="visible"  opacity="0.5" enable-background="new    " width="181" height="150" id="lymphnodes" xlink:href="7006D5F.gif"  transform="matrix(1 0 0 1 337.9533 305.2832)">

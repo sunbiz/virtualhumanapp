@@ -1,14 +1,36 @@
-<link href="bower_components/polymer/polymer.html" rel="import"/>
-<link href="bower_components/paper-tabs/paper-tabs.html" rel="import"/>
-<link href="bower_components/paper-item/paper-item.html" rel="import"/>
+<link href="../../bower_components/polymer/polymer.html" rel="import"/>
+<link href="../../bower_components/paper-tabs/paper-tabs.html" rel="import"/>
+<link href="../../bower_components/core-icon/core-icon.html" rel="import"/>
 <polymer-element name="virtualhumanapp-toolbar" noscript>
     <template>
-        <paper-tabs selected="0" noink noslide>
-            <paper-tab><paper-item icon="home" label="Home"></paper-item>Home</paper-tab>
-            <paper-tab><core-icon icon="assignment">Results</core-icon></paper-tab>
-            <paper-tab><core-icon icon="settings">Settings</core-icon></paper-tab>
-            <paper-tab><core-icon icon="account-child">Groups</core-icon></paper-tab>
-        </paper-tabs>
+        <core-toolbar>
+            <paper-tabs selected="0" noink>
+                <paper-tab>
+                    <div layout vertical center>
+                        <core-icon icon="home"></core-icon>
+                        <div>Home</div>
+                    </div>
+                </paper-tab>
+                <paper-tab>
+                    <div layout vertical center>
+                        <core-icon icon="assignment"></core-icon>
+                        <div>Results</div>
+                    </div>
+                </paper-tab>
+                <paper-tab>
+                    <div layout vertical center>
+                        <core-icon icon="settings"></core-icon>
+                        <div>Settings</div>
+                    </div>
+                </paper-tab>
+                <paper-tab>
+                    <div layout vertical center>
+                        <core-icon icon="account-child"></core-icon>
+                        <div>Groups</div>
+                    </div>
+                </paper-tab>
+            </paper-tabs>
+        </core-toolbar>
     </template>
 </polymer-element>
 

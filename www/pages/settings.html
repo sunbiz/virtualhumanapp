@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Virtual Human App - Settings</title>
+        <link rel="stylesheet" href="../styles/jquery.mobile-1.4.5.min.css">
+        <script src="../scripts/jquery-1.11.2.min.js"></script>
+        <script src="../scripts/jquery.mobile-1.4.5.min.js"></script>
+        <style>
+            body{
+                background:#567;
+                font-family:'Open Sans',sans-serif;
+            }
+        </style>
+        <meta name="application-name" content="Virtual Human App">
+    </head>
+    <body>
+        <!-- Start of first page: #settings -->
+        <div data-role="page" id="settings">
+
+            <div data-role="header">
+                <h1>Settings</h1>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <p><a href="profile.html" class="ui-btn ui-shadow ui-corner-all">Edit Profile</a></p>
+                <p><a href="#changePwd" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Change Password</a></p>
+            </div><!-- /content -->
+
+            <div data-role="footer" data-theme="a">
+                <h4>Page Footer</h4>
+            </div><!-- /footer -->
+        </div><!-- /page settings -->
+
+        <!-- Start of second page: #editProfile -->
+        <div data-role="page" id="editProfile" data-theme="a">
+
+            <div data-role="header">
+                <h1>Edit Profile</h1>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                
+                <p><a href="#settings" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Back to page "Settings"</a></p>
+
+            </div><!-- /content -->
+
+            <div data-role="footer">
+                <h4>Page Footer</h4>
+            </div><!-- /footer -->
+        </div><!-- /page editProfile -->
+
+        <!-- Start of third page: #changePwd -->
+        <div data-role="page" id="changePwd">
+
+            <div data-role="header" data-theme="b">
+                <h1>Change Password</h1>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear">
+                    <label for="password-1">Password:</label>
+                    <input type="password" data-clear-btn="true" name="password-1" id="password-1" value="" autocomplete="off">
+                    <a href="#" tabindex="-1" aria-hidden="true" class="ui-input-clear ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all ui-input-clear-hidden" title="Clear text">Clear text</a>
+                    <label for="password-2">Confirm Password:</label>
+                    <input type="password" data-clear-btn="true" name="password-2" id="password-2" value="" autocomplete="off">
+                    <a href="#" tabindex="-1" aria-hidden="true" class="ui-input-clear ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all ui-input-clear-hidden" title="Clear text">Clear text</a>
+                </div>
+
+                <p><a href="#settings" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Save</a></p>
+                <p><a href="#settings" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to page "settings"</a></p>
+            </div><!-- /content -->
+
+            <div data-role="footer">
+                <h4>Page Footer</h4>
+            </div><!-- /footer -->
+        </div><!-- /page changePwd -->
+    </body>
+</html>
+
+<!--username password privacy edit profile create groups health record, status, profile photo-->
+

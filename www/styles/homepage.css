@@ -23,7 +23,7 @@
 }
 
 body{
-    background: #3b5998;
+    background: #567;
     font-family: 'Open Sans',sans-serif;
 }
 
@@ -38,7 +38,7 @@ body{
     height: 120px;
     width: 120px;
     border-radius: 6px;
-    background-color: #0f9d58;
+    background-color: #84BEE8;
     cursor: pointer;
     text-align: center;
     word-wrap: normal;

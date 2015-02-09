@@ -14,27 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-body{
-    background:#567;
-}
-
-*{margin:0;padding:0;}
-
-form{
-    color:#f0f0f0;
-    text-align: center;
-}
-
 #profile {
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-paper-shadow {
     position: absolute;
     top:0;
     bottom: 0;
@@ -73,14 +53,10 @@ paper-shadow {
     color: #999;
 }
 
-dd.user-name,
-dd.user-email {
-    margin: 5px 0;
-}
 .user-name {
     font-size: 24px;
 }
-.user-email {
+.user-id {
     font-size: 20px;
 }
 .user-status {

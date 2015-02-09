@@ -2,27 +2,10 @@
 <html>
     <head>
         <title>Virtual Human App - User profile</title>
-
-        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-touch-fullscreen" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style"  content="black-translucent" >
-        <meta name="format-detection" content="telephone=no">
-
-        <!-- 1. Load platform support before any code that touches the DOM. -->
-        <script>
-            if (!('import' in document.createElement('link'))) {
-                var Platform = {flags: {shadow: true}};
-            }
-        </script>
-        <script src="../bower_components/webcomponentsjs/webcomponents.min.js"></script>
-        <!-- 2. Load the component using an HTML Import -->
-        <link rel="import" href="../bower_components/core-icons/image-icons.html">
-        <link rel="import" href="../bower_components/paper-elements/paper-elements.html">
-        <link href="../bower_components/core-icon-button/core-icon-button.html" rel="import">
+        <link rel="stylesheet" href="../styles/jquery.mobile-1.4.5.min.css">
         <link rel="stylesheet" href="../styles/profile.css">
-        <meta name="application-name" content="Virtual Human App">
+        <script src="../scripts/jquery-1.11.2.min.js"></script>
+        <script src="../scripts/jquery.mobile-1.4.5.min.js"></script>
     </head>
     <body>
         <div id="profile">
@@ -35,7 +18,7 @@
                     <dt>Fullname:</dt>
                     <dd class="user-name">Saptarshi Purkayastha</dd>
                     <dt>Patient ID:</dt>
-                    <a><dd class="user-email">Patient ID: 101-AT</dd></a>
+                    <dd class="user-id">Patient ID: 101-AT</dd>
 
                     <dt>Status message</dt><br/>
                     <a><dd class="user-status">I'm available <core-icon-button icon="image:edit"></core-icon-button></dd></a>     

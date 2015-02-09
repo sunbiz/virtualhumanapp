@@ -39,6 +39,7 @@
                             <paper-input-decorator id="passwordDeco"  floatingLabel label="Password" error="input is required!">
                                 <input id="password" is="core-input" name="j_password" type="password" required on-input="{{passValidate}}"/>
                             </paper-input-decorator> <br/><br/>
+                            <div id="loginMsg" style="display:none; padding-bottom: 10px">Incorrect username or password</div>
                             <div class="button raised green" onclick="loginToApp()">
                                 <div class="center" fit>Log in</div>
                                 <paper-ripple fit></paper-ripple>

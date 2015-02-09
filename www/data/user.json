@@ -1,0 +1,40 @@
+{
+	"uuid" : "d56a5bed-7664-11e3-bb35-00ff5cbca4db",
+	"display" : "admin",
+	"username" : "admin",
+	"password" : "test",
+	"systemId" : "admin",
+	"userProperties" : {
+		"vha.patientGroupIds" : "131464",
+		"loginAttempts" : "0"
+	},
+	"person" : {
+		"uuid" : "d56a5bed-7664-11e3-bb35-00ff5cbca4db",
+		"display" : "Logan Jiāng",
+		"links" : [{
+				"uri" : "",
+				"rel" : "self"
+			}
+		]
+	},
+	"privileges" : [],
+	"roles" : [{
+			"uuid" : "",
+			"display" : "Patient",
+			"links" : [{
+					"uri" : "",
+					"rel" : "self"
+				}
+			]
+		}, ],
+	"retired" : false,
+	"links" : [{
+			"uri" : "",
+			"rel" : "self"
+		}, {
+			"uri" : "",
+			"rel" : "full"
+		}
+	],
+	"resourceVersion" : "1.8"
+},
